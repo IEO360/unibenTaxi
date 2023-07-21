@@ -24,6 +24,15 @@ app.use(bodyParser.urlencoded({
 }));
 
 //middleware
+//user
+app.use('/user_auth', require('./routes_user/auth'));
+
+
+//driver
+app.use('/driver_auth', require('./routes_driver/auth'));
+
+
+//admin
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on PORT ${PORT}....`));
