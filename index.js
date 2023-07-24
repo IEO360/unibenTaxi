@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -16,6 +17,8 @@ con.on('open', error => {
         console.log(`DB connection failed with error: ${error}`);
     }
 });
+
+app.use(cors());
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
