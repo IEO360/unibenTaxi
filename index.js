@@ -29,11 +29,11 @@ app.use(bodyParser.urlencoded({
 //middleware
 //user
 app.use('/user_auth', require('./routes_user/auth'));
-
+app.use('/user_profile', require('./routes_user/profile'));
 
 //driver
 app.use('/driver_auth', require('./routes_driver/auth'));
-
+app.use('/driver_profile', require('./routes_driver/profile'))
 
 //admin
 
